@@ -3,7 +3,7 @@ import styles from "./banner.module.css"
 import Link from "next/link"
 import { FaCirclePlay as Play, FaRegBookmark as Bookmark } from "react-icons/fa6";
 
-const Banner = ({ info }) => {
+const Banner = ({ info, priority }) => {
   const genres = [
     {
       "id": 28,
@@ -89,7 +89,7 @@ const Banner = ({ info }) => {
         <Image
           src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
           fill
-          priority
+          priority={priority}
           alt="banner" />
         <div className={styles.gradient}></div>
       </div>

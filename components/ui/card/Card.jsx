@@ -88,7 +88,7 @@ const Card = ({ info }) => {
   return (
     <div className={styles.container}>
       <div className={styles.coverimage}>
-        <Image priority src={`https://image.tmdb.org/t/p/original/${poster_path}`} width={250} height={365} alt="image" className={styles.cardImage} />
+        <Image src={`https://image.tmdb.org/t/p/original/${poster_path}`} width={250} height={365} alt="image" className={styles.cardImage} />
         <div className={styles.gradient}></div>
       </div>
 

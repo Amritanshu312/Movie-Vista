@@ -13,7 +13,6 @@ import Banner from '@/components/ui/banner/Banner';
 const BannerSwiper = () => {
   const [trendingmovies, setTrendingmovies] = useState([])
 
-  console.log(trendingmovies)
   useEffect(() => {
     const getTrendingMovies = async () => {
       const url = "https://api.themoviedb.org/3/trending/movie/day?language=en-US"
@@ -41,7 +40,7 @@ const BannerSwiper = () => {
       modules={[Autoplay]}
     >
       {trendingmovies.results?.map((movie, index) => (
-        <SwiperSlide key={index}><Banner info={movie} /></SwiperSlide>
+        <SwiperSlide key={index}><Banner info={movie} priority={index === 0} /></SwiperSlide>
       ))}
     </Swiper>
   )
