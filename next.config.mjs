@@ -15,7 +15,7 @@ const nextConfig = {
     ],
   },
   env: {
-    TMDB_READ_API_KEY: `Bearer ${process.env.TMDB_READ_API_KEY}`,
+    TMDB_READ_API_KEY: process.env.TMDB_READ_API_KEY
   }
 };
 
