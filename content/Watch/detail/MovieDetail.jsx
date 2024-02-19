@@ -25,7 +25,7 @@ const MovieDetail = ({ id }) => {
       setDetail(json);
     }
     getData()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <div className={styles.container}>
