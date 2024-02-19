@@ -1,0 +1,88 @@
+.container {
+  margin-top: 83px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .iframe {
+  width: 100%;
+  max-width: 1488px;
+  background: var(--black-700);
+  border-radius: 0px 0px 15px 15px;
+}
+
+.container .iframe iframe {
+  width: -webkit-fill-available;
+  max-width: 1488px;
+  aspect-ratio: 16/9;
+  display: flex;
+  z-index: 99;
+}
+
+.option {
+  padding-inline: 5px;
+  height: 4rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.option button {
+  background-color: var(--black-800);
+  border: 2px solid var(--black-700);
+  outline: none;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "poppins", sans-serif;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  transition: 0.2s;
+}
+
+.option button:hover {
+  background-color: var(--black-900);
+}
+
+.option button:active {
+  scale: 0.9;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000cc;
+  animation: fadeinanimation 0.5s linear;
+}
+
+.lighton {
+  z-index: 99;
+  position: relative;
+}
+
+@keyframes fadeinanimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

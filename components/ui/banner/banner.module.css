@@ -1,0 +1,116 @@
+.banner {
+  position: relative;
+}
+
+.cover_image {
+  position: relative;
+  height: 30rem;
+}
+
+.cover_image img {
+  position: relative;
+  object-fit: cover;
+}
+
+.cover_image .gradient {
+  bottom: 0;
+  background: linear-gradient(0deg, var(--black-800), transparent);
+  height: 12rem;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+}
+
+.info {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  padding-left: 50px;
+  z-index: 2;
+  position: absolute;
+  max-width: 80rem;
+  /* overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; */
+}
+.type {
+  background: var(--black-800);
+  color: white;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 10px;
+  width: max-content;
+}
+.title {
+  font-size: 32px;
+  font-family: "poppins", sans-serif;
+  text-shadow: 0 0 3px #2196f3, 0 0 5px #000000;
+  font-weight: 600;
+}
+.movieinfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--grey);
+}
+.description {
+  font-size: 15px;
+  margin-top: 6px;
+  font-family: "poppins", sans-serif;
+  line-height: 20px;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.buttons a {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--white);
+  font-size: 15px;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 23px;
+  border-radius: 10px;
+  border: 2px solid var(--grey);
+  background: transparent;
+  outline: none;
+}
+.watch {
+  border: 2px solid var(--green) !important;
+  background: var(--green) !important;
+}
+
+/* helper */
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--grey);
+  border-radius: 50%;
+  display: flex;
+}
+
+@media screen and (max-width: 1025px) {
+  .info {
+    font-size: 15px;
+    margin-top: 6px;
+    font-family: "poppins", sans-serif;
+    padding-left: 20px;
+  }
+  .description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}

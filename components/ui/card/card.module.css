@@ -1,0 +1,106 @@
+.container {
+  position: relative;
+  cursor: pointer;
+  /* width: 250px; */
+}
+
+.coverimage {
+  position: relative;
+}
+
+.cardImage {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.gradient {
+  position: absolute;
+  height: 50px;
+  width: -webkit-fill-available;
+  background: linear-gradient(0deg, var(--black-700), transparent);
+  z-index: 5;
+  bottom: 2px;
+  border-radius: 0 0 10px 10px;
+}
+
+.info {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  color: var(--white);
+  padding: 16px 18px;
+}
+
+.title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  width: 210px;
+  word-wrap: break-word;
+  font-weight: 600;
+  overflow: hidden;
+  transition: 0.3s;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.movieinfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+
+.rating svg {
+  fill: yellow;
+}
+
+.category {
+  font-size: 14px;
+  color: var(--grey);
+  font-weight: 500;
+}
+
+.play svg {
+  width: 60px;
+  fill: rgb(255, 255, 255);
+  z-index: 99;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) scale(0);
+  transition: 0.5s;
+  /* display: none; */
+}
+.background {
+  position: absolute;
+  height: 100%;
+  width: 102.4%;
+  opacity: 0;
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.344);
+  top: 0;
+}
+
+/* hover */
+
+.container:hover .play svg {
+  transform: translate(50%, -50%) scale(1);
+}
+
+.container:hover .background {
+  opacity: 1;
+}
+
+.title:hover {
+  color: rgb(214, 214, 214);
+}

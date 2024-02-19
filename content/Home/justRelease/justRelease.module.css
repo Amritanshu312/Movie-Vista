@@ -1,0 +1,48 @@
+.heading {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "poppins", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: var(--white);
+  margin-left: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-left: 50px;
+  margin-right: 5%;
+}
+
+@media screen and (max-width: 470px) {
+  .heading {
+    margin-left: 5%;
+  }
+  .cards {
+    margin-left: 5%;
+  }
+}
+
+/* loading */
+
+.loading {
+  width: 100%;
+  border-radius: 10px;
+  height: 365px;
+  background-color: var(--black-700);
+  animation: loading 2.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-color: var(--black-800);
+  }
+  50% {
+    background-color: var(--black-700);
+  }
+  100% {
+    background-color: var(--black-900);
+  }
+}

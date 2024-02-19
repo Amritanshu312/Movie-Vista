@@ -1,0 +1,85 @@
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  all: unset;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.image img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.info {
+  color: var(--white);
+}
+.title {
+  all: unset;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 4px;
+  width: 210px;
+  word-wrap: break-word;
+  font-weight: 600;
+  overflow: hidden;
+  transition: 0.3s;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.movieinfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating svg {
+  fill: yellow;
+  width: 15px;
+  height: 15px;
+}
+
+.genres {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-family: "poppins", sans-serif;
+  font-size: 14px;
+  color: var(--grey);
+  font-weight: 500;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--grey);
+  border-radius: 50%;
+  display: flex;
+}
+
+.play svg {
+  position: absolute;
+  fill: white;
+  bottom: 47%;
+  transform: translate(50%, 50%) scale(0);
+  right: 50%;
+  height: 40px;
+  width: 40px;
+  transition: 0.5s;
+}
+
+.image:hover .play svg {
+  transform: translate(50%, 50%) scale(1);
+}
+
+.title:hover {
+  color: var(--grey);
+}

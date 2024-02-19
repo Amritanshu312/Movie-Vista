@@ -1,0 +1,15 @@
+.item {
+  all: unset;
+  color: var(--grey);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.item:hover {
+  color: var(--white);
+}
+
+
+@media screen and (max-width: 1025px) {
+  
+}
