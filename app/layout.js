@@ -33,6 +33,13 @@ export const metadata = {
     },
   ],
 
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: "no",
+  },
+
   other: {
     "X-Robots-Tag": "index, nofollow",
     'google-site-verification': 'ls1OUoOoLjxYsmKMPQ1ML9P99TWDsm7d5hfnGQjW7Tw',
@@ -43,12 +50,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/websiteIcon/favicon-32x32.png" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/websiteIcon/favicon-16x16.png" type="image/png" sizes="16x16" />
-        <link rel="icon" type="image/x-icon" href="/websiteIcon/favicon.ico" />
-        <link rel="apple-touch-icon" href="/websiteIcon/apple-touch-icon.png" />
-      </Head>
 
       <body className={inter.className}>
         <Navbar />
