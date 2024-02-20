@@ -108,3 +108,14 @@
     margin-inline: 10px;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .moviedetail {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .container {
+    height: max-content !important;
+  }
+}

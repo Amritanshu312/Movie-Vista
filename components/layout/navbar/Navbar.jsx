@@ -8,9 +8,12 @@ import { IoIosSearch } from "react-icons/io";
 import { MdOutlineSegment as HamburgerIcon } from "react-icons/md";
 import { CgClose } from "react-icons/cg";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(false)
+  const router = useRouter()
+
   return (
     <nav className={styles.navbar}>
       <Link href={'/'} className={styles.logo}>MovieVista</Link>
@@ -19,7 +22,9 @@ const Navbar = () => {
 
 
       <div className={styles.right}>
-        <IoIosSearch />
+        <div onClick={() => router.push('/search')} >
+          <IoIosSearch />
+        </div>
         <div className={styles.hamburger}>
           {isToggled ? <CgClose onClick={() => setIsToggled(prev => !prev)} /> :
             <HamburgerIcon onClick={() => setIsToggled(prev => !prev)} />}
