@@ -2,7 +2,6 @@ import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/footer/Footer";
 import Navbar from "@/components/layout/navbar/Navbar";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,16 +31,20 @@ export const metadata = {
       url: "https://movievista.vercel.app/",
     },
   ],
-
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: "no",
+  revision: "1.0",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 
   other: {
-    "X-Robots-Tag": "index, nofollow",
     'google-site-verification': 'ls1OUoOoLjxYsmKMPQ1ML9P99TWDsm7d5hfnGQjW7Tw',
     "X-Frame-Options": "SAMEORIGIN",
   }

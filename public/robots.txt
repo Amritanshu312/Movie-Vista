@@ -1,0 +1,23 @@
+User-agent: *
+
+# Allow indexing of all pages by default
+Disallow: /
+
+# Disallow specific directories or files
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-content/plugins/
+
+# Allow specific files or directories
+Allow: /robots.txt
+Allow: /sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 2
+
+# Specific rules for search engines (optional)
+User-agent: Googlebot
+Disallow: /search/
+
+User-agent: Bingbot
+Disallow: /private/

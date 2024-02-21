@@ -85,6 +85,9 @@ const Card = ({ info }) => {
       "name": "Western"
     }
   ]
+  if (info === undefined) {
+    return null
+  }
   return (
     <div className={styles.container}>
       <div className={styles.coverimage}>

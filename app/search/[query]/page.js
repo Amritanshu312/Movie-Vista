@@ -8,6 +8,8 @@ import { IoIosSearch } from "react-icons/io";
 import { useRouter } from 'next/navigation'
 import Loading from "@/components/draft/loading/Loading";
 import { useSearchParams } from 'next/navigation'
+import ReactPaginate from "react-paginate";
+import Head from "next/head";
 
 export default function QuerySearch({ params }) {
   const { query } = params
@@ -35,7 +37,7 @@ export default function QuerySearch({ params }) {
   useEffect(() => {
     const getData = async () => {
       setIsLoaded(false)
-      const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&page=1`;
+      const url = `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false&page=${page}`;
       const options = {
         method: 'GET',
         headers: {
@@ -49,6 +51,7 @@ export default function QuerySearch({ params }) {
       if (res.ok) {
         const json = await res.json()
         setMovies(json);
+
         setIsLoaded(true)
       }
     }
@@ -69,17 +72,8 @@ export default function QuerySearch({ params }) {
           <Card key={movie.id} info={movie} />
         ))}
       </div>
-      {movies.total_pages !== 1 && (
-        <div className={styles.pagitaioncontainer}>
-          <div className={styles.pagination}>
-            <span className={styles.prev}><FaAngleLeft /> prev</span>
-            <span className={styles.active}>{page}</span>
-            {movies.total_pages === parseInt(page) ? <span>...</span> : <span onClick={() => handlePageChange(movies.total_pages === parseInt(page) ? movies.total_pages : parseInt(page) + 1)}>{movies.total_pages === parseInt(page) ? movies.total_pages : parseInt(page) + 1}</span>}
-            <span onClick={() => handlePageChange(movies.total_pages)}>{movies.total_pages}</span>
-            <span className={styles.next}>next <FaAngleRight /></span>
-          </div>
-        </div>
-      )}
+
+
     </div>
   )
 }
