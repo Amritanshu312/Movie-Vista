@@ -68,12 +68,26 @@ export default function QuerySearch({ params }) {
       <h2>Search results for: <span>{query}</span></h2>
 
       <div className={styles.items}>
+        {movies.results?.length === 0 && <p>No results found</p>}
+
         {movies.results?.map((movie) => (
           <Card key={movie.id} info={movie} />
         ))}
+
+        {movies.results?.length <= 20 && Array.from({ length: (20 - movies.results?.length) }, (v, i) => <Card key={i} info={"blank"} />)}
+
       </div>
 
-
+      {movies.total_pages > 1 &&
+        <div className={styles.pagination}>
+          <div className={`${styles.pagiPrev} ${parseInt(page) === 1 ? styles.disabled : ''}`} onClick={() => {
+            parseInt(page) > 1 ? handlePageChange(page - 1) : null
+          }}>Prev</div>
+          <div className={`${styles.pagiNext} ${parseInt(page) >= movies.total_pages ? styles.disabled : ''}`} onClick={() => {
+            movies.total_pages >= parseInt(page) ? handlePageChange(parseInt(page) + 1) : null
+          }}>Next</div>
+        </div>
+      }
     </div>
   )
 }

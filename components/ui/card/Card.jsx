@@ -6,6 +6,9 @@ import Link from "next/link";
 
 
 const Card = ({ info }) => {
+  if (info === "blank") {
+    return <div className={styles.container}></div>
+  }
   const { poster_path, title, vote_average, genre_ids, id, media_type } = info
   const genres = [
     {
@@ -85,9 +88,6 @@ const Card = ({ info }) => {
       "name": "Western"
     }
   ]
-  if (info === undefined) {
-    return null
-  }
   return (
     <div className={styles.container}>
       <div className={styles.coverimage}>
